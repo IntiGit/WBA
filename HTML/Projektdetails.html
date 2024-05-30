@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailierte-Informationen-über-das-Projekt-einsehen">
+    <meta name="keywords" content="Projectdescription,Projecttargets,Projectdetails">
+    <meta name="author" content="Oliver&Timo">
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/Projektdetails.css">
+    <title>Projektdetails</title>
+</head>
+
+<body>
+    <header>
+        <picture>
+            <source media="(min-width: 1920px)" srcset="header1.jpg">
+            <source media="(min-width: 1280px)" srcset="header2.jpg">
+            <source media="(min-width: 640px)" srcset="header3.jpg">
+            <source media="(min-width: 320px)" srcset="header.jpg">
+            <img src="" alt="Projektdetailsbild" />
+        </picture>
+        <form action="/dummy.html" method="post" id="loginform">
+            <h1>Login</h1>
+            <div>
+
+                <label type="text">Name:</label>
+                <input type="text" placeholder="Name eingeben" required>
+            </div>
+            <br />
+            <div>
+                <label>Passwort:</label>
+                <input type="password" placeholder="Passwort eingeben" required>
+            </div>
+            <br />
+            <div>
+                <button type="submit">Anmelden</button>
+            </div>
+            <div>
+                <p>Noch kein Konto? <a href="./NeuRegistrieren.html">Neu Registrieren</a></p>
+            </div>
+        </form>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="index.html"><img src='./startseite.png' width="50px" /></a></li>
+            <li style="padding: 12px;"><a href="Projektübersicht.html">Projektübersicht</a></li>
+            <li style="padding: 12px;"><a href="NeuesProjekt.html">Neues Projekt</a></li>
+        </ul>
+    </nav>
+    <div class="grid-container">
+        <section class="left">
+            <div class="navigation">
+
+                <a href="#Projekttitel">Projekttitel</a>
+                <a href="#Projektleiter">Projektleiter</a>
+                <a href="#Kurzbeschreibung">Kurzbeschreibung</a>
+                <a href="#Langbeschreibung">Langbeschreibung</a>
+                <a href="#Projektziele">Projektziele</a>
+
+            </div>
+        </section>
+
+
+        <section class="projekt1">
+
+            <div class="logo_title">
+
+                <img src="./TestLogo.png" alt="Projektlogo" id="prj_logo">
+
+
+                <h1>Projekttitel:</h1>
+
+
+                <h2> Projektleiter:</h2>
+
+            </div>
+
+            <div>
+                <h1> <a name="Kurzbeschreibung">Kurzbeschreibung: </a></h1> <br>
+                <p id="short_description"></p>
+            </div>
+
+            <div>
+                <h1> <a name="Langbeschreibung">Langbeschreibung: </a> </h1> <br>
+                <p id="long_description"></p>
+            </div>
+
+            <div>
+                <h1><a name="Projektziele">Projektziele: </a></h1>
+                <ol>
+                    <li>
+                        <p id="goal_1"></p>
+                    </li>
+                    <li>
+                        <p id="goal_2"></p>
+                    </li>
+                </ol>
+            </div>
+
+            <h1> Startdatum: dd.mm.yyyy </h1>
+
+            <h1> Enddatum: dd.mm.yyyy </h1>
+
+            <form>
+                <div>
+                    <label for="prj_comment">Kommentar: </label> <br>
+                    <textarea class="comment" type="text" id="prj_comment" rows="6" cols="50" maxlength="300"> </textarea> <br>
+                </div>
+
+                <div>
+                    <label for="prj_comment">Bewertung (1-5): </label> <br>
+                    <input type="number" id="prj_rating" min="1" max="5" step="1"> </textarea> <br><br>
+                </div>
+            </form>
+        </section>
+
+    </div>
+    
+    <footer>
+        <div>
+            <a href="./impressum.html">Impressum</a> |
+            <a href="./Datenschutz.html">Datenschutzerklärung</a> |
+            <a href="./Haftungsausschluss.html">Haftungsausschluss</a>
+        </div>
+        <div>
+            &copy; 2024 Oliver Elias Adler & Timo Schrage GmbH. Alle Rechte vorbehalten.
+        </div>
+        <div>
+            <a class="backtotop" href="#top">Zum Seitenanfang</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

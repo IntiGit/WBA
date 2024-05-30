@@ -1,0 +1,54 @@
+/* Willkommensabschnitt */
+.welcome-section {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+#section1{
+    display: flex;
+    width: 100%;
+
+}
+
+#section1 div{
+    flex: 1;
+}
+
+
+#firstTitle {
+    animation: hideAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes hideAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+#secondTitle {
+    animation: showAnimation ease 10s;
+    animation-iteration-count: 1;
+}
+@keyframes showAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+body{
+    overflow-x: hidden;
+}

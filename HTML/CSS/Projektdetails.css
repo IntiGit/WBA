@@ -1,0 +1,55 @@
+.navigation {
+    background-color: black;
+    width: 200px;
+}
+
+.grid-container {
+    display: flex;
+}
+
+.left {
+    border-right: 3px solid lightseagreen;
+    margin-right: 20px;
+}
+
+.navigation a{
+    display: block;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: #87CEFA;
+}
+
+.logo_title {
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    justify-content: space-between;
+}
+
+.logo_title h1 {
+    font-size: 2.0em;
+    font-family: fantasy;
+}
+
+
+.logo_title h1, h2 {
+    background-color: #1B1C1D;
+    color: white;
+}
+
+.projekt1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comment {
+    background-color: transparent;
+}
+
+.comment:focus {
+    background-color: white;
+}

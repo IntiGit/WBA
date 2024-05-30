@@ -1,0 +1,48 @@
+
+.description{
+    background-color: chartreuse;
+    padding: 5px;
+    margin: 5px;
+}
+
+main section h2{
+    background-color: #1B1C1D;
+    color: white;
+    font-size: 1.5em;
+}
+
+main section p a{
+    background-color: #1B1C1D;
+}
+
+main section p:last-child {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* Der Link soll die gleiche Farbeinstellung vom Link im Seiten-Footer übernehmen. */
+main section a, footer a {
+    color: white;
+}
+
+
+.filter-options{
+    display: none;
+}
+
+/* Element direkt nach dem .btn-filter-Link ausgewählt  */
+.btn-filter:hover+ .filter-options, .filter-options:hover{
+
+    display: block;
+}
+
+.btn-filter {
+    background-color: black;
+    color: white;
+    padding: 0;
+    text-decoration: none;
+    border: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+

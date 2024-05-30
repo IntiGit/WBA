@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F5FFFA;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header form{
+    background-color: #b8c4c4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-items: end;
+    /* TODO: "Login" zentrieren! */
+  
+}
+
+nav {
+    background-color: black;
+    border-top: 3px solid #00BFFF;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #87CEFA;
+}
+
+
+
+.backtotop{
+    position:fixed;
+    right: 10px;
+    color: black;
+    background-color: #F5FFFA;
+    border: black;
+    border-radius: 10px;
+    padding: 7px;
+    bottom: 5px;
+}
+
+footer{
+    background-color: black;
+    color: orange;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer a{
+    color: aqua;
+}
+
+
