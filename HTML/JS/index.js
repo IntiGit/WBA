@@ -61,6 +61,21 @@ class Aufgabenbereich {
   }
 }
 
+
+class Projekt_Artefakt {
+  constructor(projektID, artefaktID) {
+      this.projektID = projektID;
+      this.artefaktID = artefaktID;
+  }
+}
+
+class Projekt_Aufgabenbereich {
+  constructor(projektID, aufgabenbereichID) {
+      this.projektID = projektID;
+      this.aufgabenbereichID = aufgabenbereichID;
+  }
+}
+
 class Sortierer {
   constructor() {
       this.nachDatum = []
@@ -277,32 +292,30 @@ async function main() {
 
   if (tasks) {
     processTasks(); 
-    console.log(aufgabenbereiche)
+    //console.log(aufgabenbereiche)
   }
 
   if (artefacts) {
     processArtefacts();
     //console.log(artefakte)
   }
-  // console.log(aufgabenbereiche)
-  projekte.forEach((projekt) =>{
-    // console.log(projekt)
-    // console.log(projekt.id)
-   
-    aufgabenbereiche.forEach((t)=>{
-        // console.log(t)
-          if (t.projektid === projekt.id){
-            pab_verbindungen.push(new Projekt_Aufgabenbereich(projekt.id, t.project));
-            console.log("Gefunden")
 
+  projekte.forEach((projekt) =>{
+    aufgabenbereiche.forEach((t)=>{
+          if (t.projektid === projekt.id){
+            pab_verbindungen.push(new Projekt_Aufgabenbereich(projekt.id, t.projektid));
           }
       });
   });
 
   pab_verbindungen.forEach((pa) =>{
+    console.log(pa)
       artefakte.forEach((a)=>{
-        if (a.taskid == pa.aufgabenbereichID){
+        console.log(a)
+        console.log(a.aufgabenbereich === pa.aufgabenbereichID)
+        if (a.aufgabenbereich == pa.aufgabenbereichID){
           pa_verbindungen.push(new Projekt_Artefakt(pa.projektID, pa.aufgabenbereichID))
+          
         }
       })
   })
