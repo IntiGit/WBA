@@ -1,4 +1,3 @@
-
 let projekte = [];
 let aufgabenbereiche = [];
 let artefakte = [];
@@ -176,10 +175,18 @@ class Translator {
 }
 
 
+let option = {
+  methods: "POST",
+  mode: 'cors',
+  headers: {
+  'Access-Control-Allow-Origin':'*'
+  }
+}
+
 
 function load_data(url) {
   return new Promise((resolve, reject) => {
-    fetch(url)
+    fetch(url, option)
       .then((response) => response.json())
       .then((data) => resolve(data))
       .catch((error) => reject(error));
@@ -231,13 +238,12 @@ function processArtefacts() {
       artefact.id,
       artefact.name,
       artefact.shortdesc,
-      artefact.taskid,
-      artefact.planedtime,
       artefact.longdesc,
-      artefact.realtime
+      artefact.realtime,
+      artefact.planedtime,
+      artefact.taskid
+      
     );
-
-  
     artefakte.push(newArtefact);
   });
 }
@@ -247,20 +253,24 @@ function sendNewProjekt(data) {
   if (localStorage.getItem("projekt")){
     const projekt = JSON.parse(localStorage.getItem("projekt"))
     localStorage.removeItem("projekt")
-    sendNewProjekt(projekt.data)
+    sendNewProjekt(projekt)
+   
   }
   else{
-    fetch(projectAPI_url, {
+    fetch(projectjson_url, { // dient hier nur für den Status OK , sonst bitte projectAPI_url
       method: 'POST',
+    //   mode: 'cors',
+    //   headers: {
+    //   'Access-Control-Allow-Origin':'*'  Haben wir damit probert. Wenn mann den Teil rausnimmt bekommt einen Status OK zurück.
+    // },
       body: data
     }).then(response => {
-      if (response.ok) {
+        console.log(response)
         console.log("Neues Projekt an Server gesendet.");
-      }
     })
     .catch(error => {
-      console.error('Fehler:', error);
       localStorage.setItem("projekt", JSON.stringify( data ))
+      console.log("Im Local Storage abgespeichert")
     });
   }
 };
@@ -300,21 +310,24 @@ async function main() {
     //console.log(artefakte)
   }
 
+  const data = {
+    projekt: 1,
+    artefakt: 2,
+    task: 3
+  }
+  
   projekte.forEach((projekt) =>{
     aufgabenbereiche.forEach((t)=>{
           if (t.projektid === projekt.id){
-            pab_verbindungen.push(new Projekt_Aufgabenbereich(projekt.id, t.projektid));
+            pab_verbindungen.push(new Projekt_Aufgabenbereich(projekt.id, t.id));
           }
       });
   });
 
   pab_verbindungen.forEach((pa) =>{
-    console.log(pa)
       artefakte.forEach((a)=>{
-        console.log(a)
-        console.log(a.aufgabenbereich === pa.aufgabenbereichID)
         if (a.aufgabenbereich == pa.aufgabenbereichID){
-          pa_verbindungen.push(new Projekt_Artefakt(pa.projektID, pa.aufgabenbereichID))
+          pa_verbindungen.push(new Projekt_Artefakt(pa.projektID, a.id))
           
         }
       })
@@ -322,15 +335,11 @@ async function main() {
 
 
 
-  console.log(pa_verbindungen);
-  console.log(pab_verbindungen);
+  // console.log(pa_verbindungen);
+  // console.log(pab_verbindungen);
 
-  const data = {
-    projekt: 1,
-    artefakt: 2,
-    task: 3
-  }
 
+  
 sendNewProjekt(data);
 
   
@@ -339,28 +348,6 @@ sendNewProjekt(data);
 }
 
 main()
-
-
-
-// Projekt-Artefakt Verbindungen
-// pa_verbindungen.push(new Projekt_Artefakt(projekte[0].id, artefakte[0].id, 12))
-// pa_verbindungen.push(new Projekt_Artefakt(projekte[0].id, artefakte[1].id, 21))
-
-// pa_verbindungen.push(new Projekt_Artefakt(projekte[1].id, artefakte[2].id, 1))
-// pa_verbindungen.push(new Projekt_Artefakt(projekte[1].id, artefakte[3].id, 2))
-
-// pa_verbindungen.push(new Projekt_Artefakt(projekte[2].id, artefakte[1].id, 18))
-// pa_verbindungen.push(new Projekt_Artefakt(projekte[2].id, artefakte[3].id, 3))
-
-
-
-// Projekt-Aufgabenbereich Verbindungen
-// pab_verbindungen.push(new Projekt_Aufgabenbereich(projekte[0].id, aufgabenbereiche[0].id))
-
-// pab_verbindungen.push(new Projekt_Aufgabenbereich(projekte[1].id, aufgabenbereiche[1].id))
-
-// pab_verbindungen.push(new Projekt_Aufgabenbereich(projekte[2].id, aufgabenbereiche[0].id))
-// pab_verbindungen.push(new Projekt_Aufgabenbereich(projekte[2].id, aufgabenbereiche[1].id))
 
 
 
