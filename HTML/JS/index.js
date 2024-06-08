@@ -10,9 +10,14 @@ let artefacts = '';
 
 const projectAPI_url = "https://scl.fh-bielefeld.de/WBA/projectsAPI";
 
-const projectjson_url = "https://scl.fh-bielefeld.de/WBA/projects.json";
-const taskjson_url = "https://scl.fh-bielefeld.de/WBA/tasks.json";
-const artefactjson_url =  "https://scl.fh-bielefeld.de/WBA/artefacts.json";
+// const projectjson_url = "https://scl.fh-bielefeld.de/WBA/projects.json";  
+// const taskjson_url = "https://scl.fh-bielefeld.de/WBA/tasks.json";    
+// const artefactjson_url =  "https://scl.fh-bielefeld.de/WBA/artefacts.json";
+
+const projectjson_url = "projects.json"; 
+const taskjson_url = "tasks.json"; 
+const artefactjson_url =  "artefacts.json";  
+
 
 class Projekt {
   constructor(id, titel, kurzBeschreibung, langBeschreibung, logo,maintainer, startDatum, endDatum) {
@@ -186,7 +191,7 @@ let option = {
 
 function load_data(url) {
   return new Promise((resolve, reject) => {
-    fetch(url, option)
+    fetch(url)
       .then((response) => response.json())
       .then((data) => resolve(data))
       .catch((error) => reject(error));
@@ -258,12 +263,6 @@ function sendNewProjekt(data) {
   }
   else{
     fetch(projectjson_url, { // dient hier nur für den Status OK , sonst bitte projectAPI_url
-      method: 'POST',
-    //   mode: 'cors',
-    //   headers: {
-    //   'Access-Control-Allow-Origin':'*'  Haben wir damit probert. Wenn mann den Teil rausnimmt bekommt einen Status OK zurück.
-    // },
-      body: data
     }).then(response => {
         console.log(response)
         console.log("Neues Projekt an Server gesendet.");
@@ -275,7 +274,7 @@ function sendNewProjekt(data) {
   }
 };
 
-function berechneProjektlaufzeit(projektID) { //TODO
+function berechneProjektlaufzeit(projektID) {
   let laufzeit = 0
   for(let verbindung of pa_verbindungen) {
     if(verbindung.projektID == projektID) {
@@ -297,17 +296,17 @@ async function main() {
 
   if (projects) {
     processProjects();
-    //console.log(projekte)
+    console.log(projekte)
   }
 
   if (tasks) {
     processTasks(); 
-    //console.log(aufgabenbereiche)
+    console.log(aufgabenbereiche)
   }
 
   if (artefacts) {
     processArtefacts();
-    //console.log(artefakte)
+    console.log(artefakte)
   }
 
   const data = {
@@ -335,8 +334,8 @@ async function main() {
 
 
 
-  // console.log(pa_verbindungen);
-  // console.log(pab_verbindungen);
+  console.log(pa_verbindungen);
+  console.log(pab_verbindungen);
 
 
   

@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"name": "Implementierung des Projektmanagers",
+		"shortdesc": "Das Semesterprojekt für WBA.",
+		"longdesc": "In diesem Projekt lernen Sie die Grundlangen der Webentwicklung an einem einfachen Projekt kennen.",
+		"logourl": "https://scl.fh-bielefeld.de/WBA/projectmanager.avif",
+		"maintainer": "Grit Behrens",
+		"start": "2024-04-01T08:20:28.438Z",
+		"end": "2024-07-17T08:20:28.438Z"
+	},
+	{
+		"id": 2,
+		"name": "Hochwasserfrühwarnsystem",
+		"shortdesc": "KI basiertes Hochwasserfrühwarnsystem",
+		"longdesc": "<h1>Das Werre-Hochwasserfrühwarnsystem</h1><h2>Ziele</h2>In der Modellregion Werre soll ein Hochwasserfrühwarnsystem mit der Hilfe von KI und einer schicken Weboberfläche entwickelt werden.<br><h2>Datenquellen</h2>Es müssen Daten aus zahlreichen APIs abgerufen und in einer Datenbank zusammengeführt werden.<br><h3>Wetterdaten</h3>Wetterdaten werden vom DWD bezogen. Die offenen Schnittstellen werden dazu genutzt, ebenso wie die Datenexporte historischer Daten.<h3>Pegelmessstationen</h3>Daten von Pgelmesstationen werden über das WasserNetz-NRW beuzogen.<h3>Satteliteninformationen</h3>Weitere Daten werden aus den Satteliten der ESA Beobachtungssateliten bezogen.<h2>Laufzeit</h2>Das Projekt soll drei Jahre laufen.",
+		"logourl": "https://scl.fh-bielefeld.de/WBA/werre.avif",
+		"maintainer": "Grit Behrens",
+		"start": "2024-10-01T08:20:28.438Z",
+		"end": "2027-31-12T08:20:28.438Z"
+	},
+	{
+		"id": 3,
+		"name": "SoSe Party!",
+		"shortdesc": "Die große Sommersemester Party",
+		"longdesc": "Die Semesterparty des Sommersemesters. OpenAir auf dem Campus mit Live-Musik, Bratwürstchen und jede Menge Bier.",
+		"logourl": "https://scl.fh-bielefeld.de/WBA/party.jpg",
+		"maintainer": "Studi Team",
+		"start": "2024-04-01T08:20:28.438Z",
+		"end": "2024-07-17T08:20:28.438Z"
+	},
+	{
+		"id": 4,
+		"name": "Projekt ohne Arbeit",
+		"shortdesc": "Dieses Projekt hat keine Arbeit",
+		"longdesc": "In diesem Projekt gibt es nichts zu tun, daher ist es sehr entspanennd.",
+		"logourl": "https://scl.fh-bielefeld.de/WBA/urlaub.avif",
+		"maintainer": "SunDream",
+		"start": "2024-07-01T08:20:28.438Z",
+		"end": "2024-09-17T08:20:28.438Z"
+	},
+	{
+		"id": 5,
+		"name": "Das nächste tolle Projekt",
+		"shortdesc": "Hier entsteht ein neues Projekt",
+		"longdesc": "Dieses Projekt wird erst noch geplant.",
+		"logourl": "https://scl.fh-bielefeld.de/WBA/neu.avif",
+		"maintainer": "Studi Team",
+		"start": "2025-04-01T08:20:28.438Z",
+		"end": "2025-07-17T08:20:28.438Z"
+	}
+]

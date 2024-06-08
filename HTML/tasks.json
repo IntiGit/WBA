@@ -1,0 +1,56 @@
+[
+	{
+		"id": 1,
+		"name": "Konzeption - P1",
+		"shortdesc": "Konzeption des Projektmanagers",
+		"project": 1
+	},
+	{
+		"id": 2,
+		"name": "Implementierung - P1",
+		"shortdesc": "Implementierung des Projektmanagers",
+		"project": 1
+	},
+	{
+		"id": 3,
+		"name": "Wartung - P1",
+		"shortdesc": "Wartung des Projektmanagers",
+		"project": 1
+	},
+	{
+		"id": 4,
+		"name": "Konzeption - P2",
+		"shortdesc": "Konzeption des Frühwarnsystems",
+		"project": 2
+	},
+	{
+		"id": 5,
+		"name": "Implementierung - P2",
+		"shortdesc": "Implementierung des Frühwarnsystems",
+		"project": 2
+	},
+	{
+		"id": 6,
+		"name": "Wartung - P2",
+		"shortdesc": "Wartung des Frühwarnsystems",
+		"project": 2
+	},
+	{
+		"id": 7,
+		"name": "Planung :|",
+		"shortdesc": "Planung der Party",
+		"project": 3
+	},
+	{
+		"id": 8,
+		"name": "Durchführung :)",
+		"shortdesc": "Durchführung der Party",
+		"project": 3
+	},
+	{
+		"id": 9,
+		"name": "Aufräumen :(",
+		"shortdesc": "Das Aufträumen danach",
+		"project": 3
+	}
+]

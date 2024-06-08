@@ -1,0 +1,165 @@
+[
+	{
+		"id": 1,
+		"name": "Projekt 1 - ER-Diagramm",
+		"shortdesc": "ER-Diagramm erstellen",
+		"longdesc": "Ein ER-Diagramm für den Projektmanager",
+		"planedtime": "7:30",
+		"realtime": "7:50",
+		"taskid": 1
+	},
+	{
+		"id": 2,
+		"name": "Projekt 1 - Klassen-Diagramm",
+		"shortdesc": "Klassen-Diagramm erstellen",
+		"longdesc": "Ein Klassen-Diagramm für den Projektmanager",
+		"planedtime": "5:00",
+		"realtime": "4:30",
+		"taskid": 1
+	},
+	{
+		"id": 3,
+		"name": "Projekt 1 - UserStories",
+		"shortdesc": "User-Stories erstellen",
+		"longdesc": "Die UserStories für den Projektmanager",
+		"planedtime": "2:00",
+		"realtime": "2:10",
+		"taskid": 1
+	},
+	{
+		"id": 4,
+		"name": "Projekt 1 - Webseitegerüst",
+		"shortdesc": "Webseitegerüst erstellen",
+		"longdesc": "Das Webseitegerüst für den Projektmanager",
+		"planedtime": "2:00",
+		"realtime": "1:40",
+		"taskid": 2
+	},
+	{
+		"id": 5,
+		"name": "Projekt 1 - Startseite",
+		"shortdesc": "Startseite erstellen",
+		"longdesc": "Die Startseite für den Projektmanager",
+		"planedtime": "3:00",
+		"realtime": "2:40",
+		"taskid": 2
+	},
+	{
+		"id": 6,
+		"name": "Projekt 1 - Projektübersicht",
+		"shortdesc": "Projektübersicht erstellen",
+		"longdesc": "Die Projektübersicht für den Projektmanager",
+		"planedtime": "3:00",
+		"realtime": "3:10",
+		"taskid": 2
+	},
+	{
+		"id": 7,
+		"name": "Projekt 1 - Projekt-anlegen-Seite",
+		"shortdesc": "Projekt-anlegen-Seite erstellen",
+		"longdesc": "Die Projekt-anlegen-Seite für den Projektmanager",
+		"planedtime": "5:00",
+		"taskid": 2
+	},
+	{
+		"id": 8,
+		"name": "Projekt 1 - Weitere Seiten",
+		"shortdesc": "Weitere Seiten erstellen",
+		"longdesc": "Die wieteren Seiten für den Projektmanager",
+		"planedtime": "1:00",
+		"taskid": 2
+	},
+	{
+		"id": 9,
+		"name": "Projekt 1 - Wöchentliche Fehlerbehebungen",
+		"shortdesc": "Wöchentliche Fehlerbehebungen",
+		"longdesc": "Wöchentliche Fehlerbehebungen für den Projektmanager",
+		"planedtime": "3:00",
+		"taskid": 3
+	},
+	{
+		"id": 10,
+		"name": "Werre Frühwarnsystem - UserStories",
+		"shortdesc": "UserStories erstellen",
+		"longdesc": "UserStories für das Frühwarnsystem",
+		"planedtime": "10:00",
+		"realtime": "11:50",
+		"taskid": 4
+	},
+	{
+		"id": 11,
+		"name": "Werre Frühwarnsystem - ER-Diagramm",
+		"shortdesc": "ER-Diagramm erstellen",
+		"longdesc": "Ein ER-Diagramm für das Frühwarnsystem",
+		"planedtime": "5:30",
+		"realtime": "5:50",
+		"taskid": 4
+	},
+	{
+		"id": 12,
+		"name": "Werre Frühwarnsystem - Klassen-Diagramme",
+		"shortdesc": "Klassen-Diagramme erstellen",
+		"longdesc": "Klassen-Diagramme für das Frühwarnsystem",
+		"planedtime": "40:00",
+		"realtime": "42:00",
+		"taskid": 4
+	},
+	{
+		"id": 13,
+		"name": "Werre Frühwarnsystem - Einarbeitung SmartMonitoring",
+		"shortdesc": "Einarbeitung SmartMonitoring",
+		"longdesc": "Einarbeitung in das SmartMonitoring, das für die Datensammlung und Visualisierung genutzt werden soll.",
+		"planedtime": "10:00",
+		"realtime": "9:40",
+		"taskid": 5
+	},
+	{
+		"id": 14,
+		"name": "Werre Frühwarnsystem - Anbdingung Datenquellen",
+		"shortdesc": "Anbindung freier Datenquellen",
+		"longdesc": "Anbindung freier Datenquellen. Importer konfigurieren, soweit verwendbar. Neue Importer schrieben wo nötig.",
+		"planedtime": "80:00",
+		"realtime": "82:30",
+		"taskid": 5
+	},
+	{
+		"id": 15,
+		"name": "Werre Frühwarnsystem - Erstellung Dashboard",
+		"shortdesc": "Erstellung eines Dashboards",
+		"longdesc": "Dashboard für den Überblick über gesammelte Daten.",
+		"planedtime": "16:00",
+		"taskid": 5
+	},
+	{
+		"id": 16,
+		"name": "Planung des Ablaufs",
+		"shortdesc": "Planung des Ablaufs der Party",
+		"longdesc": "Wann findet was statt?",
+		"planedtime": "25:00",
+		"taskid": 7
+	},
+	{
+		"id": 17,
+		"name": "Organisation Bands",
+		"shortdesc": "Bands organisieren",
+		"longdesc": "Bands kontaktieren und angagieren.",
+		"planedtime": "10:00",
+		"taskid": 7
+	},
+	{
+		"id": 18,
+		"name": "Feiern",
+		"shortdesc": "Die Party findet statt.",
+		"longdesc": "Party durchführen, Einlasskontrolle, Gäste begrüßen, ...",
+		"planedtime": "5:00",
+		"taskid": 8
+	},
+	{
+		"id": 19,
+		"name": "Aufräumen",
+		"shortdesc": "Danach muss alles wieder aufgeräumt werden.",
+		"longdesc": "Bühne abbauen, Müll einsammeln, Installationen entfernen,...",
+		"planedtime": "15:00",
+		"taskid": 9
+	}
+]
